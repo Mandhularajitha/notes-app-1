@@ -1,0 +1,64 @@
+.home-main-container{
+    grid-template-columns: 40% 40%;
+    margin-top: 4.5rem;
+    height: 80vh;
+    width: 80%;
+    margin-left: 8rem;
+    box-shadow: 2px 2px 5px 3px var(--black-900);
+}
+.home-img{
+    width: 100%;
+    height: 75vh;
+}
+.txt-container{
+    height: 55vh;
+}
+.home-page-btn{
+    width: 6rem;
+    height: 3rem;
+    border-radius: .5rem;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.flex-direction-column{
+    flex-direction: column;
+}
+
+
+.grid{
+    display: grid;
+    /* background-image: url(https://img.freepik.com/free-vector/pastel-ombre-background-pink-purple_53876-120750.jpg?w=2000); */
+
+}
+
+.jstfy-ctnt-spc-between{
+    justify-content: space-between;
+}
+
+.jstfy-ctnt-center{
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+.jstfy-ctnt-spc-around{
+    justify-content: space-around;
+}
+
+.align-itm-center{
+    align-items: center;
+}
+
+.position-sticky{
+    position: sticky;
+}
+
+.z-index{
+    z-index: 1;
+}
