@@ -15,7 +15,7 @@ const Notes = () => {
     <div className="grid jstfy-ctnt-center">
         <h2>Create New Note</h2>
         <div className="note-container ">
-            <input onChange={(e) => { setTitle(e.target.value) }} className="title" type="text" placeholder="Title" />
+            <input onChange={(e) => setTitle(e.target.value) } className="title" type="text" placeholder="Title" />
             <section className="style-btn flex">
                 <button className="txt-style-btn">
                     <img className="txt-logo-img" src="https://cdn-icons-png.flaticon.com/128/88/88393.png" alt="nhi ayi" />
@@ -35,7 +35,7 @@ const Notes = () => {
 
             <img className="plus-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqz9ojOswVPWM6bM49LdTbmU6OQ4IKZpxIaA&usqp=CAU" alt="" />
             <button className="create-note-btn">
-                Create Notes
+                Create Notes app
             </button>
         </section>
     </div>
