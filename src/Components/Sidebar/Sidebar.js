@@ -1,45 +1,39 @@
-import { Link } from "react-router-dom"
-import "./Sidebar.css"
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
+import { useNoteContext } from "../../Context/notesContext";
+import "./Sidebar.css";
 
 const Sidebar = () => {
-  return (
-    <div className="sideBar-Container">
 
-    <Link to="/">
-        <div className="side-icon notes">
-            <span><i class="fa-solid fa-house"></i></span>
-            <span>Home</span>
+    const { note, dispatchNote } = useNoteContext();
+    return (
+        <div className="sideBar-container">
+            <Link to="/text-editor">
+                <div className="side-icon notes">
+                    <span><i className="fa fa-sticky-note-o"></i></span>
+                    <span>Notes</span>
+                </div>
+            </Link>
+            <Link to="/label">
+                <div className="side-icon">
+                    <i className="sidebar-logo fa fa-bookmark-o"></i>
+                    <span>Label</span>
+                </div>
+            </Link>
+            <Link to="/archieve">
+                <div className="side-icon">
+                    <img className="sidebar-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDQpKQGzxMmF1LzqgMlRA80jEuMJ-HZHRYUwah6n3tqfogxUenIIUI8wuE-REAFliVcjg&usqp=CAU" alt="archieve logo" />
+                    <span>Archieve</span>
+                </div>
+            </Link>
+            <Link to="/trash">
+                <div className="side-icon">
+                    <img className="sidebar-logo" src="https://www.pikpng.com/pngl/m/47-471206_png-file-svg-ios-trash-icon-svg-clipart.png" alt="trash logo" />
+                    <span>Trash</span>
+                </div>
+            </Link>
         </div>
-    </Link>
-    <Link to="/Notes">
-        <div className="side-icon notes">
-            <span><i className="fa fa-sticky-note-o"></i></span>
-            <span>Notes</span>
-        </div>
-    </Link>
-    <Link to="/Label">
-        <div className="side-icon">
-            <span><i className="fa fa-tags side-icon"></i></span>
-            <span>Label</span>
-        </div>
-    </Link>
-
-    <Link to="/Label">
-        <div className="side-icon">
-            <span><i className="fa fa-archive side-icon"></i></span>
-            <span>Archieve</span>
-        </div>
-    </Link>
-
-    <Link to="/Trash">
-        <div className="side-icon">
-            <span><i className="fa fa-trash-o side-icon"></i></span>
-            <span>Trash</span>
-        </div>
-    </Link>
-    </div>
-  )
+    )
 }
 
-export {Sidebar}
+export { Sidebar };
