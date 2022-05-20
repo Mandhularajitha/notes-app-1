@@ -1,0 +1,15 @@
+.c-section{
+    margin-top: 1rem;
+}
+
+.label-section:hover .bottom-icon{
+    visibility: inherit;
+}
+
+.fa:hover{
+    cursor: pointer;
+    background-color: transparent;
+}
+.label-section{
+    height: 100vh;
+}

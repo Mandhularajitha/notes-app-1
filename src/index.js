@@ -4,6 +4,10 @@ import "./index.css";
 import App from "./App";
 import { makeServer } from "./server";
 import { BrowserRouter } from "react-router-dom";
+import { NoteProvider } from "./Context/notesContext";
+import { AuthProvider } from "./Context/authContext";
+import { ThemeProvider } from "./Context/themeContext";
+
 
 // Call make Server
 makeServer();
@@ -11,7 +15,13 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-    <App />
+      <NoteProvider>
+        <AuthProvider>
+          <ThemeProvider>
+            <App />
+          </ThemeProvider>
+        </AuthProvider>
+      </NoteProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
